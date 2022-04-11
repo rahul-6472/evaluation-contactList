@@ -1,4 +1,4 @@
-let contacts = JSON.parse(localStorage.getItem("contactDetails")) || [];
+let contacts = JSON.parse(localStorage.getItem("contactList")) || [];
 
 let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
 

@@ -3,7 +3,7 @@ document.querySelector("#form-box").addEventListener("submit", takeInput);
 function takeInput() {
   event.preventDefault();
 
-  let contactDetails = JSON.parse(localStorage.getItem("contactDetails")) || [];
+  let contactList = JSON.parse(localStorage.getItem("contactList")) || [];
 
   let contactObj = {
     name: document.querySelector("#name").value,
@@ -13,7 +13,7 @@ function takeInput() {
     contactType: document.querySelector("#contactType").value,
   };
 
-  contactDetails.push(contactObj);
-  localStorage.setItem("contactDetails", JSON.stringify(contactDetails));
+  contactList.push(contactObj);
+  localStorage.setItem("contactList", JSON.stringify(contactList));
   alert("contact added succesfully");
 }
